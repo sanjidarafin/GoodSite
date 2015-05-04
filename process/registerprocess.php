@@ -31,9 +31,8 @@ $email = $_POST["email"] ;
    } else {
 $pass =md5( $_POST["pass"]);
    }
-}
-
-if(!$nameErr){
+  
+  if(!$nameErr){
   $sql ="INSERT INTO `customer` (`customer_id`, `customer_name`, `email`, `address`, `password`) VALUES (NULL, '$customer_name', '$email', '$address', '$pass');";
     if($conn->query($sql) == TRUE)
     {
@@ -48,6 +47,9 @@ if(!$nameErr){
   else{
      echo "Access Denied";
   }
+}
+
+
 require_once($_SERVER['DOCUMENT_ROOT'].'/footer.php');
   ?>
 </div>
