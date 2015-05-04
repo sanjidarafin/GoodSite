@@ -1,5 +1,10 @@
 <?php require_once('header.php') ?>
-	
+
+  <?php
+  if(isset($_SESSION['user_email'])){
+    echo '<div class="notification">You already Logged in</div>';
+  } else
+    { ?>
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
@@ -35,5 +40,6 @@
 			</div>
 		</div>
 	</section><!--/form-->
-	
+
+<?php } ?>	
 <?php require_once('footer.php') ?>

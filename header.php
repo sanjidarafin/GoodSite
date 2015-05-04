@@ -23,7 +23,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://demo.themeum.com/html/eshopper/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="http://demo.themeum.com/html/eshopper/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-<?php $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/'; ?>
+<?php $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+session_start();?>
 <body>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
@@ -90,7 +91,16 @@
 								<li><a href="index.php#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="<?php echo $root ?>checkout.php"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="<?php echo $root?>cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="<?php echo $root?>login.php"><i class="fa fa-lock"></i> Login</a></li>
+                 <?php
+  if(isset($_SESSION['user_email'])){ ?>
+    <li><a href="<?php echo $root?>logout.php"><i class="fa fa-lock"></i> Logout</a></li>
+ <?php } else
+    { ?>
+   <li><a href="<?php echo $root?>login.php"><i class="fa fa-lock"></i>Login</a></li>
+ <?php }
+  ?> 
+                
+								
 							</ul>
 						</div>
 					</div>

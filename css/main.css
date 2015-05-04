@@ -2520,4 +2520,7 @@ h2.title {
   color: #FE980F;
 }
 
-
+.notification{
+  margin-bottom:20px;
+  text-align: center;
+}

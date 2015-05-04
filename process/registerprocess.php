@@ -1,7 +1,6 @@
+<div class="notification">
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/header.php'); ?>
-<div align="center">
-<?php
+require_once($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/admin/connection.php');
   $nameErr = $customer_name = $email = $address = $birthday = $pass =  $sex = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -49,8 +48,6 @@ if(!$nameErr){
   else{
      echo "Access Denied";
   }
-  ?>
-  </div>
-  <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/footer.php');
   ?>
+</div>
