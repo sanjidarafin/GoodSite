@@ -1,4 +1,5 @@
 <?php
+$currency= "TK";  ////Currency sumbol or code
 $servername = "localhost";
 $username = "root";
 $password = "123456";
