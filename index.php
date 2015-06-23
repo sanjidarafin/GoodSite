@@ -13,38 +13,38 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1>Banoful<span>&</span>Co <h3>(বনফুল এন্ড কোং)</h3></h1>
+									<h2>বিশুদ্ধ খাবারের বিশ্বস্ত নাম</h2>
+									<p>Like all other creation Banoful & Co. Ltd., has been established with a view to full fill some objectives. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/blackberry.jpg" class="girl img-responsive" alt="" />
 									<img src="images/home/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1>Banoful<span>&</span>Co <h3>(বনফুল এন্ড কোং)</h3></h1>
+									<h2>বিশুদ্ধ খাবারের বিশ্বস্ত নাম</h2>
+									<p>Like all other creation Banoful & Co. Ltd., has been established with a view to full fill some objectives. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/biscuits.jpeg" class="girl img-responsive" alt="" />
 									<img src="images/home/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1>Banoful<span>&</span>Co <h3>(বনফুল এন্ড কোং)</h3></h1>
+									<h2>বিশুদ্ধ খাবারের বিশ্বস্ত নাম</h2>
+									<p>Like all other creation Banoful & Co. Ltd., has been established with a view to full fill some objectives. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/burgers.jpg" class="girl img-responsive" alt="" />
 									<img src="images/home/pricing.png" class="pricing" alt="" />
 								</div>
 							</div>
@@ -101,7 +101,8 @@ if(isset($_SESSION["products"]))
 ?>
 </div>          
  
-						</div><!--/category-products-->
+						</div>
+            <!--/category-products-->
             
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
@@ -110,127 +111,45 @@ if(isset($_SESSION["products"]))
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="index.php#sportswear">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Sportswear
+										Category
 										</a>
 									</h4>
 								</div>
 								<div id="sportswear" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-											<li><a href="index.php#">Nike </a></li>
-											<li><a href="index.php#">Under Armour </a></li>
-											<li><a href="index.php#">Adidas </a></li>
-											<li><a href="index.php#">Puma</a></li>
-											<li><a href="index.php#">ASICS </a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="index.php#mens">
-											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Mens
-										</a>
-									</h4>
-								</div>
-								<div id="mens" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="index.php#">Fendi</a></li>
-											<li><a href="index.php#">Guess</a></li>
-											<li><a href="index.php#">Valentino</a></li>
-											<li><a href="index.php#">Dior</a></li>
-											<li><a href="index.php#">Versace</a></li>
-											<li><a href="index.php#">Armani</a></li>
-											<li><a href="index.php#">Prada</a></li>
-											<li><a href="index.php#">Dolce and Gabbana</a></li>
-											<li><a href="index.php#">Chanel</a></li>
-											<li><a href="index.php#">Gucci</a></li>
+											
+                      <?php
+  $sql = "SELECT * FROM `category`";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) { ?>
+<select name="category">
+  <?php
+    while($row = $result->fetch_assoc()) { ?>
+  <option value='<?php echo $row["id"]?>'><?php echo $row["name"]?></option>
+  <?php
+    } ?>
+  </select>
+  <?php
+} else {
+    echo "0 results";
+}
+  ?>
+						
 										</ul>
 									</div>
 								</div>
 							</div>
 							
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="index.php#womens">
-											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Womens
-										</a>
-									</h4>
-								</div>
-								<div id="womens" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="index.php#">Fendi</a></li>
-											<li><a href="index.php#">Guess</a></li>
-											<li><a href="index.php#">Valentino</a></li>
-											<li><a href="index.php#">Dior</a></li>
-											<li><a href="index.php#">Versace</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Kids</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Fashion</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Households</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Interiors</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Clothing</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Bags</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="index.php#">Shoes</a></h4>
-								</div>
-							</div>
 						</div><!--/category-products-->
 					
-						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
-							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<li><a href="index.php#"> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href="index.php#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-									<li><a href="index.php#"> <span class="pull-right">(27)</span>Albiro</a></li>
-									<li><a href="index.php#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-									<li><a href="index.php#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-									<li><a href="index.php#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href="index.php#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-								</ul>
-							</div>
-						</div><!--/brands_products-->
-						
+									
 						<div class="price-range"><!--price-range-->
 							<h2>Price Range</h2>
 							<div class="well text-center">
 								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+								 <b class="pull-left">Tk.0</b> <b class="pull-right">Tk. 6000</b>
 							</div>
 						</div><!--/price-range-->
 						
@@ -240,6 +159,7 @@ if(isset($_SESSION["products"]))
 					
 					</div>
 				</div>
+        
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
@@ -297,102 +217,58 @@ echo '<input type="hidden" name="type" value="add" />';
 					
 
 					
-					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">recommended items</h2>
-						
-						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="item active">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="index.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
+				<div class="features_items"><!--recommended items-->
+						<h2 class="title text-center">Recommended Items</h2>
+
+              <?php
+   
+	$results = $conn->query("SELECT * FROM products WHERE category_id='1' ORDER BY id ASC");
+    if ($results) { 
+	
+        //fetch results set as object and output HTML
+        while($obj = $results->fetch_object())
+        {
+          ?>
+            <form action="cart_update.php" method="post" >
+        			<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/<?php echo $obj->product_img_name ?>" alt="" />
+										<h2><?php echo $obj->product_name ?></h2>
+										<p><?php echo $obj->price ?></p>
+										<button class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
 									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="index.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="index.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>$56</h2>
+											<p><?php echo $obj->product_name ?></p>
+                      
+     <p><?php echo 'Qty <input type="text" name="product_qty" value="1" size="3" />'; ?></p>
+											<button class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
 										</div>
 									</div>
 								</div>
-								<div class="item">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="index.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="index.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="index.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="index.php#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="index.php#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
 								</div>
 							</div>
-							 <a class="left recommended-item-control" href="index.php#recommended-item-carousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="index.php#recommended-item-carousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							  </a>			
-						</div>
-					</div><!--/recommended_items-->
+						</div>  
+ <?php 
+            echo '<input type="hidden" name="product_code" value="'.$obj->product_code.'" />';
+echo '<input type="hidden" name="type" value="add" />';
+                echo '<input type="hidden" name="return_url" value="'.$current_url.'" />';
+              ?>
+              </form>
+        <?php  
+        }
+    
+    }
+    ?>  
+</div><!--/recommended_items-->
 					
 				</div>
 			</div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Home | Banoful & Co</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/prettyPhoto.css" rel="stylesheet">
@@ -33,7 +33,7 @@ session_start();?>
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="index.php#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="index.php#"><i class="fa fa-phone"></i> +88-01770-000-000</a></li>
 								<li><a href="index.php#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 							</ul>
 						</div>
@@ -58,28 +58,29 @@ session_start();?>
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="<?php echo $root?>index.php"><img src="/images/home/logo.png" alt="" /></a>
+							<a href="<?php echo $root?>index.php"><img src="/images/home/logos.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
+									Bangladesh
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="index.php#">Canada</a></li>
-									<li><a href="index.php#">UK</a></li>
+									<li><a href="index.php#">India</a></li>
+									<li><a href="index.php#">USA</a></li>
 								</ul>
 							</div>
 							
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
+									Currency
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="index.php#">Canadian Dollar</a></li>
-									<li><a href="index.php#">Pound</a></li>
+									<li><a href="index.php#">Taka</a></li>
+									<li><a href="index.php#">Rupi</a></li>
+                  <li><a href="index.php#">Dolar</a></li>
 								</ul>
 							</div>
 						</div>
@@ -89,7 +90,7 @@ session_start();?>
 							<ul class="nav navbar-nav">
 								<li><a href="index.php#"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="index.php#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="<?php echo $root ?>checkout.php"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="<?php echo $root ?>cart.php"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="<?php echo $root?>cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                  <?php
   if(isset($_SESSION['user_email'])){ ?>
